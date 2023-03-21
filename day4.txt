@@ -1,0 +1,19 @@
+user = {name: "person", age: 5 };
+user1 = {age: 5, name: "person" };
+
+function isEqual(user, user1) {
+    var userKeys = object.keys(user);
+    var user1Keys = object.keys(user1);
+
+    if (userKeys.length != user1Keys.length) {
+        return false;
+    }
+    for (var userKey of userKeys) {
+        if (user[userKey] != user1[userKey]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isEqual(user, user1));
